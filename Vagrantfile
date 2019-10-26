@@ -23,7 +23,6 @@ Vagrant.configure(2) do |config|
     device.vm.synced_folder ".", "/vagrant", disabled: true
 
     # NETWORK INTERFACES      
-      # link for eth --> oob-mgmt-switch:
       device.vm.network "private_network", ip: "192.168.0.100"
 
       # link for eth --> routerA <-> routerB
@@ -57,7 +56,6 @@ Vagrant.configure(2) do |config|
   config.vm.define "mgmt" do |device|
     device.vm.hostname = "mgmt" 
     
-    # device.vm.box = "ubuntu/xenial64"
     device.vm.box = "ubuntu/bionic64"
     device.vm.provider "virtualbox" do |v|
       v.name = "mgmt"
@@ -66,8 +64,6 @@ Vagrant.configure(2) do |config|
     end
     #   see note here: https://github.com/pradels/vagrant-libvirt#synced-folders
     device.vm.synced_folder ".", "/vagrant"
-    # device.vm.synced_folder "vagrant", "/vagrant/"
-    # device.vm.synced_folder "sot", "/vagrant/sot"
 
     device.vm.network "private_network", ip: "192.168.0.200"
 
