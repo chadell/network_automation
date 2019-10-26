@@ -1,7 +1,7 @@
 # Network Automation training
 
 ## Lab Environment
-
+```
 +---------------+               +---------------+
 |    routerA    |eth2       eth2|    routerB    |
 |      VyOS     +---------------+      VyOS     |
@@ -17,6 +17,7 @@
                 |    Ubuntu     |
                 | 192.168.0.200 |
                 +---------------+
+```
 
 
 ## Setup the environment
