@@ -1,0 +1,4 @@
+# etc/hosts
+192.168.0.100 routerA
+192.168.0.101 routerB
+192.168.0.200 mgmt
