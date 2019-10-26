@@ -79,6 +79,9 @@ Vagrant.configure(2) do |config|
     # Copy secret key
     device.vm.provision :shell , inline: "sudo cp /vagrant/vagrant/id_rsa /home/vagrant/.ssh/id_rsa"
 
+    # Install Ansible
+    device.vm.provision :shell , path: "./vagrant/install_ansible.sh"
+
   end
 
 end
