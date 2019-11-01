@@ -10,8 +10,8 @@ Vagrant.configure(2) do |config|
 
   ##### DEFINE VM for routerA #####
   config.vm.define "routerA" do |device|
-    
-    device.vm.hostname = "routerA" 
+
+    device.vm.hostname = "routerA"
     device.vm.box = "higebu/vyos"
     device.vm.box_version = "1.1.7"
 
@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     #   see note here: https://github.com/pradels/vagrant-libvirt#synced-folders
     device.vm.synced_folder ".", "/vagrant", disabled: true
 
-    # NETWORK INTERFACES      
+    # NETWORK INTERFACES
       device.vm.network "private_network", ip: "192.168.0.100"
 
       # link for eth --> routerA <-> routerB
@@ -32,8 +32,8 @@ Vagrant.configure(2) do |config|
 
   ##### DEFINE VM for right_router #####
   config.vm.define "routerB" do |device|
-    
-    device.vm.hostname = "routerB" 
+
+    device.vm.hostname = "routerB"
     device.vm.box = "higebu/vyos"
     device.vm.box_version = "1.1.7"
 
@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
     #   see note here: https://github.com/pradels/vagrant-libvirt#synced-folders
     device.vm.synced_folder ".", "/vagrant", disabled: true
 
-    # NETWORK INTERFACES      
+    # NETWORK INTERFACES
       device.vm.network "private_network", ip: "192.168.0.101"
 
       # link for eth --> routerB <-> routerA
@@ -54,8 +54,8 @@ Vagrant.configure(2) do |config|
 
   ##### DEFINE VM for MGMT #####
   config.vm.define "mgmt" do |device|
-    device.vm.hostname = "mgmt" 
-    
+    device.vm.hostname = "mgmt"
+
     device.vm.box = "ubuntu/bionic64"
     device.vm.provider "virtualbox" do |v|
       v.name = "mgmt"
@@ -81,6 +81,9 @@ Vagrant.configure(2) do |config|
 
     # Install Ansible
     device.vm.provision :shell , path: "./vagrant/install_ansible.sh"
+
+    # Install pip3
+    device.vm.provision :shell , inline: "sudo apt install python3-pip"
 
   end
 
