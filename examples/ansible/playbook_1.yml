@@ -1,0 +1,24 @@
+# export ANSIBLE_HOST_KEY_CHECKING=False
+# ansible-playbook -i inventory.cfg playbook_1.yml -vvv
+---
+
+- name: First playbook
+  hosts: routers
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: "Let's get some data from the routers"
+      vyos_command:
+        commands:
+          - show version
+          - show hardware cpu
+        wait_for:
+          - "result[0] contains 'VyOS 1.1.7'"
+    - name: Set IP addresses on aggregate
+      vyos_l3_interface:
+        name: eth2
+        ipv4: '{{ ip_addr }}'
+    - name: "Now using vyos_facts module, get all the config"
+      vyos_facts:
+        gather_subset: config
