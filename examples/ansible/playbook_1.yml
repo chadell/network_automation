@@ -15,10 +15,12 @@
           - show hardware cpu
         wait_for:
           - "result[0] contains 'VyOS 1.1.7'"
+
     - name: Set IP addresses on aggregate
       vyos_l3_interface:
         name: eth2
         ipv4: '{{ ip_addr }}'
+
     - name: "Now using vyos_facts module, get all the config"
       vyos_facts:
         gather_subset: config
