@@ -8,8 +8,10 @@ In order to keep it tidy I'm creating 2 sections:
 
 ## Networking
 
-### Instant Messaging
+### Community
 
+* [Cisco DevNet](https://developer.cisco.com/)
+* [Juniper NRE](https://labs.networkreliability.engineering/)
 * [Networktocode](http://networktocode.herokuapp.com/)
 
 ### Blogs / Podcasts
