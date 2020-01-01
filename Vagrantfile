@@ -83,7 +83,7 @@ Vagrant.configure(2) do |config|
     device.vm.provision :shell , path: "./vagrant/install_ansible.sh"
 
     # Install pip3
-    device.vm.provision :shell , inline: "sudo apt install python3-pip"
+    device.vm.provision :shell , inline: "sudo apt -y install python3-pip"
 
   end
 
