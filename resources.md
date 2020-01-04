@@ -60,6 +60,7 @@ In order to keep it tidy I'm creating 2 sections:
 
 ### Books
 
+* [Mastering Python Networking](https://www.amazon.com/Mastering-Python-Networking-solution-automation/dp/1784397008)
 * [Linux Kernel Networking](https://www.amazon.com/Linux-Kernel-Networking-Implementation-Experts/dp/143026196X)
 * [UNIX and Linux System Administration Handbook](https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=5TV7N7CT4T8ESGS47SZR)
 * [DevOps Toolkit 2.0](https://leanpub.com/the-devops-2-toolkit)
