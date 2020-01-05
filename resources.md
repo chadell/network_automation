@@ -30,6 +30,8 @@ In order to keep it tidy I'm creating 2 sections:
 * [Koran Peyton](https://www.peytonkoran.net/)
 * [Matt Oswalt](https://keepingitclassless.net/)
 * [Router Jockey](https://routerjockey.com/)
+* [Cristian Sirbu](https://www.trueneutral.eu/)
+* [PacketFlow](https://www.packetflow.co.uk/)
 
 ### Books
 
