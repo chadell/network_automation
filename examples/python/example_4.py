@@ -1,8 +1,10 @@
 import sys
 from colorama import Fore, Style
 import json
+import pprint
 
-input("""In this example, we will understand basic difference between YAML, JSON and XML formats.
+
+input("""In this example, we will understand the basic differences between YAML, JSON and XML formats.
 Please, keep pressing enter to keep moving forward...""")
 
 try:
