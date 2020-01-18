@@ -9,7 +9,7 @@ command = 'import netmiko'
 try:
     exec(command)
 except Exception as e:
-    print(f"{Fore.RED}Maybe you forgot to import Nemiko, please do it 'pip3 install netmiko'{Style.RESET_ALL}")
+    print(f"{Fore.RED}Maybe you forgot to import Nemiko, please do it 'pip3 install netmiko==2.4.2'{Style.RESET_ALL}")
     sys.exit(1)
 
 input(f"Netmiko module imported by doing '{Fore.YELLOW}{command}{Style.RESET_ALL}'")

@@ -8,7 +8,7 @@ Please, keep pressing enter to keep moving forward...""")
 try:
     import netmiko
 except Exception as e:
-    print(f"{Fore.RED}Maybe you forgot to import Nemiko, please do 'pip3 install netmiko'{Style.RESET_ALL}")
+    print(f"{Fore.RED}Maybe you forgot to import Nemiko, please do 'pip3 install netmiko==2.4.2'{Style.RESET_ALL}")
     sys.exit(1)
 
 input(f"""We will create a dictionary variable {Fore.YELLOW}base_config{Style.RESET_ALL} with the device_type, user and password.""")
