@@ -7,30 +7,16 @@
                 "ip": "192.0.2.1",
                 "mask": "24"
             }
-        ],
-        "bgp_sessions": [
-            {
-                "local_as": 65536,
-                "remote_as": 65536,
-                "remote_ip": "192.0.2.2"
-            }
-       ]
+        ]
     },
     "routerB": {
-         "mgmt_ip": "192.168.0.101",
+        "mgmt_ip": "192.168.0.101",
         "interfaces": [
             {
                 "name": "eth2",
                 "ip": "192.0.2.2",
                 "mask": "24"
             }
-        ],
-        "bgp_sessions": [
-            {
-                "local_as": 65536,
-                "remote_as": 65536,
-                "remote_ip": "192.0.2.1"
-            }
-       ]
+        ]
     }
 }
