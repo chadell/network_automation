@@ -32,15 +32,16 @@ example = {
 input(f"\nFirst, let's explore the native Python dictionary.")
 print(f"{Fore.GREEN}{example}{Style.RESET_ALL}")
 
-input(f"\nNow, time to check YAML encoding\n")
-print(f"{Fore.GREEN}{yaml.dump(example)}{Style.RESET_ALL}")
-
-input(f"\nNow, time to check JSON encoding\n")
-print(f"{Fore.GREEN}{json.dumps(example, indent=4)}{Style.RESET_ALL}")
-
 input(f"\nNow, time to check XML encoding\n")
 xml = dicttoxml.dicttoxml(example)
 dom = parseString(xml)
 print(f"{Fore.GREEN}{dom.toprettyxml()}{Style.RESET_ALL}")
+
+input(f"\nNow, time to check JSON encoding\n")
+print(f"{Fore.GREEN}{json.dumps(example, indent=4)}{Style.RESET_ALL}")
+
+input(f"\nNow, time to check YAML encoding\n")
+print(f"{Fore.GREEN}{yaml.dump(example)}{Style.RESET_ALL}")
+
 
 print("\nEnd of the example")
