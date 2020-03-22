@@ -97,7 +97,7 @@ for device in NETWORK_DEFINITION:
         )
 
         input(
-            "Finally we push the config to the device, first adding the specific host and"
+            "Finally we push the config to the device, first adding the specific host and "
             "then connecting to the Device and sending and commiting the rendered command:\n"
             f"{Fore.YELLOW}{bunch_of_commands}{Style.RESET_ALL}"
         )
